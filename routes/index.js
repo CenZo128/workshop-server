@@ -6,5 +6,8 @@ route.get("/", (req, res) => {
 });
 
 route.get("/employees", EmployeeControllers.getEmployees);
+route.post("/employees/add", EmployeeControllers.addEmployee)
+route.delete("/employees/delete/:id", EmployeeControllers.deleteEmployee)
+route.put("/employees/edit/:id", EmployeeControllers.editEmployee)
 
 module.exports = route;
